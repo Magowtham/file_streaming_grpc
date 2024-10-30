@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package file_streaming;
+
+option go_package="proto/filestream";
+
+message FileRequest {
+    string filename=1;
+}
+
+message FileChunk {
+    bytes chunk=1;
+    int32 chunk_size=2;
+}
+
+
+service FileStreamService {
+    rpc DownloadFile(FileRequest) returns (stream FileChunk);
+}

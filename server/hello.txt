@@ -1,0 +1,1 @@
+hello world this my first file stream with gRPC [Gooogle Remote Procedure Call]
